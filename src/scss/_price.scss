@@ -1,0 +1,115 @@
+.price {
+   margin: 16px;
+   &__slider-container {
+      overflow: hidden;
+      margin-right: 0;
+      @include tablet {
+         display: none;
+      }
+   }
+   &__row{
+      display: flex;
+   }
+   &__item {
+      box-sizing: border-box;
+      width: 260px;
+      height: 200px;
+      padding: 16px;
+      border-radius: 6px;
+      background-color: $white;
+      flex-shrink: 0;
+      font-family: 'TTLakes-Medium', Helvetica, sans-serif;
+      font-size: 14px;
+      line-height: 18px;
+      color: $black;
+      &-title {
+         color: $gray;
+      }
+      &-text {
+         margin-bottom: 16px;
+      }
+      &-button {
+         transform: translate(100px, -50px);
+      }
+   }
+
+   &__info {
+      font-family: 'TTLakes-Regular', Helvetica, sans-serif;
+      color: $black;
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 16px;
+      margin-top: 24px;
+      @include tablet {
+         width: 421px;
+      }
+
+   }
+
+   &__link {
+      font-family: 'TTLakes-Medium', Helvetica, sans-serif;
+      color: $black;
+      font-size: 16px;
+      line-height: 24px;
+      position: relative;
+      &::after {
+         content: '';
+         width: 11px;
+         height: 12px;
+         background-image: url('/img/Line.svg');
+         background-repeat: no-repeat;
+         position: absolute;
+         right: -26px;
+         bottom: 5px;
+      }
+   }
+
+}
+
+.price-table {
+   display: none;
+   @include tablet {
+      display: table;
+   }
+   border-collapse: collapse;
+   width: 100%;
+   font-family: 'TTLakes-Medium', Helvetica, sans-serif;
+   font-size: 14px;
+   line-height: 18px;
+   color: $black;
+   border-radius: 6px;
+
+   &__title {
+      color: $gray;
+      height: 64px;
+      & td {
+         padding: 16px;
+      }
+   }
+   &__item {
+      background-color: $white;
+      height: 64px;
+      border-bottom: 1px solid $design;
+      & td {
+         padding: 16px;
+      }
+   }
+
+}
+
+.price-table__item .table__button {
+   padding: 0;
+}
+
+.swiper-pagination-price {
+   text-align: center;
+}
+
+.table__button button{
+   transition: 0.3s;
+   &:hover {
+      transition-duration: 0.3s;
+      filter: opacity(70%);
+      transform: scale(1.1);
+   }
+}

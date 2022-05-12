@@ -1,0 +1,168 @@
+@import "mixins";
+@import "fonts";
+@import "vars";
+@import "header";
+@import "settings";
+@import "title";
+@import "brands";
+@import "equipment";
+@import "price";
+@import "footer";
+@import "menu";
+@import "feedback";
+@import "call";
+
+.main {
+   margin: 24px 16px;
+   &__icon, &__icon-text {
+      display: none;
+      transition: 0.3s;
+      &:hover {
+         filter: opacity(70%);
+         transform: scale(1.1);
+      }
+   }
+
+   &__title {
+      color: $black;
+      font-family: 'TTLakes-Bold', Helvetica, sans-serif;
+      font-size: 28px;
+      line-height: 40px;
+
+      @include other {
+         display: flex;
+      }
+
+      &::before {
+         content: "";
+         height: 40px;
+         width: 4px;
+         position: absolute;
+         background-color: $highlights-bright;
+         border-radius: 0 6px 6px 0;
+         left: 0;
+         @include other {
+            left: 320px;
+         }
+      }
+      
+   }
+   @include other {
+      &__icon, &__icon-text {
+         font-family: 'TTLakes-Medium', Helvetica, sans-serif;
+         font-size: 16px;
+         display: inline;
+         margin-left: 8px;
+      }
+      &__icon-text:first-child {
+         margin-left: auto;
+      }
+      &__icon:first-of-type {
+         margin-right: 32px;
+      }
+   }
+   &__navigation {
+      display: flex;
+      color: $gray;
+      font-family: 'TTLakes-Medium', Helvetica, sans-serif; 
+      font-size: 16px;
+      line-height: 24px;
+      overflow: auto;
+      margin-top: 24px;
+      &-title {
+         flex-shrink: 0;
+         margin-right: 20px;
+         padding: 10px;
+         @include other {
+            margin-bottom: 16px;
+         }
+         &_checked {
+            background-color: $white;
+            border-radius: 6px;
+            border: 2px solid $highlights;
+            padding: 8px;
+         }
+      }
+
+      @include other {
+         flex-wrap: wrap;
+      }
+      
+   }
+   &__info {
+      display: flex;
+      flex-direction: column;
+      margin-top: 24px;
+      color: $black;
+      @include tablet {
+         flex-direction: column;
+         flex-wrap: wrap;
+         height: 260px;
+         margin-right: 16px;
+      }
+      @include other {
+         margin-top: 0;
+      }
+      &-article {
+         font-family: 'TTLakes-Regular', Helvetica, sans-serif;
+         font-size: 14px;
+         line-height: 18px;
+         margin-bottom: 16px;
+         &_mobile-hidden, &_other-hidden {
+            display: none;
+         }
+         @include tablet {
+            &_mobile-hidden {
+               display: block;
+            }
+            order:1;
+            width: 50%;
+         }
+         @include other {
+            &_other-hidden {
+               display: block;
+            }
+         }
+      }
+      &-foto {
+         margin-top: 16px;
+         @include tablet {
+            order:3;
+            border-radius: 6px;
+            width: 50%;
+            margin-top: 0;
+            flex-grow: 0;
+            max-width: 400px;
+         }
+      }
+   }
+  &__button {
+   font-family: 'TTLakes-Medium', Helvetica, sans-serif;
+   font-size: 16px;
+   line-height: 24px;
+   transition: 0.3s;
+   &:hover {
+      filter: opacity(70%);
+   }
+   @include tablet {
+      order:2;
+   }
+   &-link {
+      margin-left: 16px;
+   }
+   &-img {
+      margin-left: 8px;
+      &_rotate{
+         transform: rotate(180deg);
+      }
+   }
+  } 
+
+}
+
+button {
+   border: none;
+   background-color: white;
+   width: 119px;
+   height: 32px;
+ }

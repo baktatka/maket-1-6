@@ -1,0 +1,32 @@
+.footer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height:147px;
+   border-top: 1px solid $sky;
+   font-family: 'TTLakes-Medium', Helvetica, sans-serif;
+   color: $gray;
+   font-size: 14px;
+   padding: 16px 4px;
+   &__item {
+      text-align: center;
+      margin-bottom: 16px;
+      @include tablet {
+         width: 33%;
+         text-align: start;
+         &:last-of-type {
+            text-align: end;
+         }
+      }
+   }
+   @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 24px;
+      height: 105px;
+   }
+   @include other {
+      height: 85px;
+   }
+}
+   

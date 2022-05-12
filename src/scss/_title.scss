@@ -1,0 +1,15 @@
+.title {
+   width: 100%;
+   height: 80px;
+   background-image: linear-gradient(to right, $softgray , $white );
+   border-top: 1px solid $sky;
+   font-family: 'TTLakes-Regular', Helvetica, sans-serif;
+   font-size: 16px;
+   line-height: 24px;
+   padding: 16px;
+   color: $gray;
+   @include tablet {
+      height: 56px;
+      margin-bottom: 16px;
+   }
+}

@@ -1,0 +1,107 @@
+.equipment {
+   height: 228px;
+   position: relative;
+   @include tablet {
+      height: 100%;
+   }
+   @include other {
+      height: auto;
+   }
+
+   &__slider-container {
+      margin-top: 16px;
+      margin-left: 16px;
+      max-width: 100%;
+      overflow: hidden;
+      @include tablet {
+         overflow: visible;
+         margin-bottom: 24px;
+      }
+   }
+
+   &__row {
+      @include tablet {
+         display: flex;
+         flex-wrap: wrap;
+      }
+   }
+
+
+   &__item {
+      flex-basis: 240px;
+      flex-shrink: 0;
+      height: 160px;
+      border-radius: 6px;
+      background-color: $white;
+      border: 1px solid $design;
+      padding: 16px;
+      position: relative;
+      margin-bottom: 16px;
+      @include tablet {
+         margin-right: 24px;
+         flex-basis: 192px;
+      }
+      &:last-of-type {
+         @include other {
+            display: block;
+         }
+      }
+   }
+
+   &__title {
+      font-family: 'TTLakes-Medium', Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      color: $black;
+   }
+
+   &__bottom {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      transition: 0.6s;
+      &:hover {
+         transform: scale(1.1);
+      }
+   }
+
+   &__button {
+      display: none;
+
+      @include tablet {
+         display: block;
+         font-family: 'TTLakes-Medium', Helvetica, sans-serif;
+         color: $black;
+         font-size: 16px;
+         line-height: 24px;
+         margin-bottom: 32px;
+         margin-left: 32px;
+      }
+      &-link {
+         position: relative;
+         margin-left: 16px;
+         transition: 0.3s;
+         &:hover {
+            filter: opacity(70%);
+         }
+      }
+   }
+}
+
+.swiper-pagination-equipment {
+   position: absolute;
+   text-align: center;
+}
+
+
+.hidden {
+   display: none;
+}
+
+.visible {
+   display: block;
+}
+
+.equipment__button-img_rotate {
+   transform: rotate(180deg);
+}

@@ -1,0 +1,65 @@
+.header {
+   display: flex;
+   height: 88px;
+   width: 100%;
+   background-color: $white;
+   border-bottom: 2px solid $sky;
+   justify-content: space-between;
+   align-items: center;
+   padding: 24px 16px;
+   &__call, &__chat, &__profile {
+      display: none;
+   }
+
+   &__repair {
+      position: relative;
+   }
+
+   &__repair::before {
+      content: "";
+      height: 32px;
+      width: 2px;
+      background-color: $design;
+      position: absolute;
+      left: -20px;
+      top: 5px
+   }
+
+
+
+   @include tablet {
+      &__call, &__chat, &__profile {
+         display: block;
+      }
+      &__call {
+         margin-left: auto;
+      }
+      &__item {
+         margin-right: 16px;
+      }
+      &__profile {
+         margin-right: 42px;
+      }
+      &__burger {
+         position: relative;
+      }
+      &__burger::before {
+         content: "";
+         height: 32px;
+         width: 2px;
+         background-color: $design;
+         position: absolute;
+         left: 70px;
+         top: 5px
+      }
+      &__logo {
+         margin-left: 40px;
+      }
+   }
+
+   @include other {
+      & {
+         display: none;
+      }
+   }
+}
