@@ -12,7 +12,7 @@
       <button class="call__close"><img src="img/close.svg" alt="Закрыть"></button>
       <p class="call__title">Заказать звонок</p>
       <div class="call__input">
-         <input type="phone" placeholder="Телефон">
+         <input type="number" placeholder="Телефон">
       </div>
       <p class="call__text">Нажимая “отправить”, вы даете согласие на <span class="call__text_highlight">обработку персональных данных</span> и соглашаетесь с нашей <span class="call__text_highlight">политикой конфиденциальности</span></p>
       <div class="call__submit">
@@ -22,18 +22,18 @@
    <div class="feedback">
       <button class="feedback__close"><img src="img/close.svg" alt="Закрыть"></button>
       <p class="feedback__title">Обратная связь</p>
-      <form action="" method="post">
+      <form action="#" method="post">
          <div class="feedback__input">
             <input type="text" placeholder="Имя">
          </div>
          <div class="feedback__input">
-            <input type="phone" placeholder="Телефон">
+            <input type="number" placeholder="Телефон">
          </div>
          <div class="feedback__input">
             <input type="text" placeholder="Электронная почта">
          </div>
          <div class="feedback__input">
-            <textarea placeholder="Сообщение" name="" id="" cols="30" rows="10"></textarea>
+            <textarea placeholder="Сообщение" name="feedback__textarea" id="feedback__textarea" cols="30" rows="10"></textarea>
          </div>
          <p class="feedback__text">Нажимая “отправить”, вы даете согласие на <span class="feedback__text_highlight">обработку персональных данных</span> и соглашаетесь с нашей <span class="feedback__text_highlight">политикой конфиденциальности</span></p>
          <div class="feedback__submit">
@@ -108,8 +108,8 @@
             <a class="main__navigation-title" href="">Специальные цены</a>
             <a class="main__navigation-title" href="">Отзывы</a>
          </nav>
-         <section class="main__info">
-            <article class="main__info-article">
+         <div class="main__info">
+            <div class="main__info-article">
               Мы являемся авторизованным сервисным центром по ремонту техники Dell. 
               Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
               <span class="main__info-article_mobile-hidden">
@@ -122,7 +122,7 @@
                Мы гордимся тем, что к нам обращаются по рекомендациям и, 
                в свою очередь, советуют нас родным и близким.
               </span>
-            </article>
+            </div>
 
             <div class="main__button">
               <img class="main__button-img main__button-img_rotate" src="img/icon.svg" alt="Читать далее">
@@ -130,10 +130,10 @@
             </div>
 
             <img class="main__info-foto" src="img/foto.jpg" alt="Фотография лого">
-         </section>
+         </div>
 
       </main>
-      <section class="brands">
+      <div class="brands">
         <header class="title">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</header>
            <div class="slider-container" data-mobile="false">
               <div class="link-row swiper-wrapper">
@@ -188,11 +188,11 @@
               <a class="brands__button-link" href="">Показать все</a>
             </div>
           </div>
-     </section>
+     </div>
      <header class="title">РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</header>
-<section class="equipment">
+<div class="equipment">
    <div class="equipment__slider-container" data-mobile="false">
-           <section class="equipment__row swiper-wrapper">
+           <div class="equipment__row swiper-wrapper">
              <div class="equipment__item">
                <div class="equipment__title">Ремонт ноутбуков </div>
                <a class="equipment__bottom" href=""><img src="img/go.svg" alt="Ремонт ноутбуков"></a>
@@ -209,16 +209,16 @@
               <div class="equipment__title">Ремонт  мониторов </div>
               <a class="equipment__bottom" href=""><img src="img/go.svg" alt="Ремонт  мониторов"></a>
             </div>
-           </section>
+           </div>
            <div class="swiper-pagination-equipment"></div>
    </div>
    <div class="equipment__button">
       <img class="equipment__button-img equipment__button-img_rotate" src="img/icon.svg" alt="Показать все">
       <a class="equipment__button-link" href="">Показать все</a>
     </div>
-</section>
+</div>
      <header class="title">ЦЕНЫ НА УСЛУГИ</header>
-     <section class="price">
+     <div class="price">
       <table class="price-table">
          <tr class="price-table__title">
            <td>Ремонтные услуги</td>
@@ -310,7 +310,7 @@
         </div>
        <p class="price__info">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
        <a class="price__link" href="">Получить коммерческое предложение</a>
-     </section>
+     </div>
      <footer class="footer">
        <p class="footer__item">© 2019 CPS <br>
         Разработано командой Apesong </p>
